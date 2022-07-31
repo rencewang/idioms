@@ -10,6 +10,16 @@ body {
 
 .idiom-row {
   width: 100vw;
+  margin: 0 auto;
+  animation: stretchWidth 5s infinite;
+  -webkit-animation: stretchWidth 5s infinite;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.idiom-row:hover {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 
 #backward {
@@ -23,4 +33,16 @@ body {
 #forward {
   fill: red;
   mix-blend-mode: exclusion;
+}
+
+@keyframes stretchWidth {
+  0% {
+    width: 100vw;
+  }
+  50% {
+    width: 30vw;
+  }
+  100% {
+    width: 100vw;
+  }
 }

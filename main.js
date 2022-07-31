@@ -42,6 +42,7 @@ const shuffle = (array) => {
   return modifiedArray;
 };
 
+// increase stroke width of the text
 const increaseStroke = (element) => {
   const stroke = element.getAttribute('stroke-width');
   element.setAttribute('stroke-width', parseFloat(stroke) + 0.05);
