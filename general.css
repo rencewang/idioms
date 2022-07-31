@@ -13,7 +13,14 @@ body {
 }
 
 #backward {
+  z-index: -50;
   position: fixed;
   left: 0;
   bottom: 0;
+  fill: blue;
+}
+
+#forward {
+  fill: red;
+  mix-blend-mode: exclusion;
 }

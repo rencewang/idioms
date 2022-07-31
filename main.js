@@ -20,6 +20,7 @@ const idioms = [
   '应该就是现在',
 ];
 
+// reorder idioms for every load
 const shuffle = (array) => {
   let modifiedArray = array.slice();
   let currentIndex = array.length;
@@ -41,20 +42,29 @@ const shuffle = (array) => {
   return modifiedArray;
 };
 
+const increaseStroke = (element) => {
+  const stroke = element.getAttribute('stroke-width');
+  element.setAttribute('stroke-width', parseFloat(stroke) + 0.05);
+};
+
 const addIdiomsToContainer = (idioms, container) => {
   shuffle(idioms).forEach((idiom) => {
     let div = document.createElement('div');
+
     div.classList.add('idiom-row');
+    div.onclick = (element) => {
+      increaseStroke(element.target);
+    };
+
     div.innerHTML = `
       <svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" width="100%" height="200px" preserveAspectRatio="none">
-        <text x="0" y="15" textlength="100%" lengthadjust="spacingAndGlyphs">${idiom}</text>
+        <text x="0" y="15" textlength="100%" lengthadjust="spacingAndGlyphs" stroke="green" stroke-width="0">${idiom}</text>
       </svg>
     `;
     container.appendChild(div);
   });
 };
 
-const idiomsContainer = document.querySelector('#idioms');
 const forwardContainer = document.querySelector('#forward');
 const backwardContainer = document.querySelector('#backward');
 addIdiomsToContainer(idioms, forwardContainer);
@@ -71,6 +81,5 @@ window.onload = function () {
 
 // scroll backwardContainer in reverse direction
 window.addEventListener('scroll', (e) => {
-  console.log(window.scrollY);
   backwardContainer.style.bottom = `-${window.scrollY}px`;
 });
