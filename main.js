@@ -20,21 +20,57 @@ const idioms = [
   '应该就是现在',
 ];
 
+const shuffle = (array) => {
+  let modifiedArray = array.slice();
+  let currentIndex = array.length;
+  let randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [modifiedArray[currentIndex], modifiedArray[randomIndex]] = [
+      modifiedArray[randomIndex],
+      modifiedArray[currentIndex],
+    ];
+  }
+
+  return modifiedArray;
+};
+
+const addIdiomsToContainer = (idioms, container) => {
+  shuffle(idioms).forEach((idiom) => {
+    let div = document.createElement('div');
+    div.classList.add('idiom-row');
+    div.innerHTML = `
+      <svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" width="100%" height="200px" preserveAspectRatio="none">
+        <text x="0" y="15" textlength="100%" lengthadjust="spacingAndGlyphs">${idiom}</text>
+      </svg>
+    `;
+    container.appendChild(div);
+  });
+};
+
 const idiomsContainer = document.querySelector('#idioms');
-idioms.forEach((idiom) => {
-  let div = document.createElement('div');
-  div.innerHTML = `
-    <svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" width="100%" height="200px" preserveAspectRatio="none">
-      <text x="0" y="15" textlength="100%" lengthadjust="spacingAndGlyphs">${idiom}</text>
-    </svg>
-  `;
-  idiomsContainer.appendChild(div);
-});
+const forwardContainer = document.querySelector('#forward');
+const backwardContainer = document.querySelector('#backward');
+addIdiomsToContainer(idioms, forwardContainer);
+addIdiomsToContainer(idioms, backwardContainer);
 
-const scrollTop = Math.random() * (test.clientHeight - window.innerHeight);
-
+// randomize position on page when reloading
+const scrollTop =
+  Math.random() * (forwardContainer.clientHeight - window.innerHeight);
 window.onload = function () {
   setTimeout(function () {
     window.scrollTo({ top: scrollTop });
   }, 0);
 };
+
+// scroll backwardContainer in reverse direction
+window.addEventListener('scroll', (e) => {
+  console.log(window.scrollY);
+  backwardContainer.style.bottom = `-${window.scrollY}px`;
+});
