@@ -53,6 +53,7 @@ const addIdiomsToContainer = (idioms, container) => {
     let div = document.createElement('div');
 
     div.classList.add('idiom-row');
+    div.classList.add('noselect');
     div.onclick = (element) => {
       increaseStroke(element.target);
     };
