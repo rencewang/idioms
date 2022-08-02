@@ -2,6 +2,9 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  background-color: transparent;
+  animation: backgroundColor 30s infinite;
+  -webkit-animation: backgroundColor 30s infinite;
 }
 
 .top {
@@ -11,7 +14,7 @@ body {
   left: 0;
   width: 100vw;
   height: 70px;
-  background: linear-gradient(#fff, rgba(0, 0, 0, 0));
+  background: linear-gradient(#ffffff, rgba(0, 0, 0, 0));
 }
 
 #idioms {
@@ -41,7 +44,7 @@ body {
 }
 
 #forward {
-  fill: #ffd102;
+  fill: #3d5af1;
   mix-blend-mode: exclusion;
 }
 
@@ -54,6 +57,18 @@ body {
   }
   100% {
     width: 100vw;
+  }
+}
+
+@keyframes backgroundColor {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
   }
 }
 
