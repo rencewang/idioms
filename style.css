@@ -30,8 +30,6 @@ text {
   font-size: 90px;
 }
 
-/* Layers of displays */
-
 /* fixed position centered dot on page */
 #dot {
   z-index: 100;
@@ -44,6 +42,25 @@ text {
   border-radius: 50%;
   background-color: #ffd102;
   cursor: pointer;
+  transition: background-color 0.5s linear;
+}
+
+#dot:hover {
+  background-color: #d72323;
+}
+
+#dot:hover:after {
+  content: 'stop';
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* top layer, scroll backward */

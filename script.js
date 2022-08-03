@@ -138,10 +138,16 @@ window.addEventListener('scroll', (e) => {
 });
 
 // stop animation on forwardContainer when user click on #dot
-document.querySelector('#dot').onclick = () => {
+const dot = document.querySelector('#dot');
+dot.setAttribute('data-after', 'stop');
+dot.onclick = () => {
   if (forwardContainer.style.animationPlayState == 'running') {
+    dot.setAttribute('data-after', 'start');
     forwardContainer.style.animationPlayState = 'paused';
+    forwardContainer.style.webkitAnimationPlayState = 'paused';
   } else {
+    dot.setAttribute('data-after', 'stop');
     forwardContainer.style.animationPlayState = 'running';
+    forwardContainer.style.webkitAnimationPlayState = 'running';
   }
 };
