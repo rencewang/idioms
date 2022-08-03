@@ -103,7 +103,7 @@ const addIdiomsToContainer = (idioms, container) => {
     div.innerHTML = `
       <svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" width="100%" height="200px" preserveAspectRatio="none">
         <text x="0" y="15" lengthadjust="spacingAndGlyphs" textlength="100%" stroke="#ffd102" stroke-width="0">
-        ${idiom}
+          ${idiom}
         </text>
       </svg>
     `;
@@ -125,14 +125,14 @@ window.onload = function () {
   }, 0);
 };
 
-// scroll backwardContainer in reverse direction
+// scroll backwardContainer in reverse direction and infinite scroll
 window.addEventListener('scroll', (e) => {
   backwardContainer.style.bottom = `-${window.scrollY}px`;
   if (window.scrollY >= forwardContainer.clientHeight - window.innerHeight) {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 5 });
   } else if (window.scrollY == 0) {
     window.scrollTo({
-      top: forwardContainer.clientHeight - window.innerHeight,
+      top: forwardContainer.clientHeight - window.innerHeight - 5,
     });
   }
 });
