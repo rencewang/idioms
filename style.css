@@ -7,14 +7,7 @@
   cursor: default;
 }
 
-svg {
-  font-family: 'Songti SC', 'Noto Serif SC', serif;
-}
-
-text {
-  font-size: 90px;
-}
-
+/* Individual SVG rows */
 .idiom-row {
   width: 100vw;
   margin: 0 auto;
@@ -29,6 +22,31 @@ text {
   animation-play-state: running;
 }
 
+svg {
+  font-family: 'Songti SC', 'Noto Serif SC', serif;
+}
+
+text {
+  font-size: 90px;
+}
+
+/* Layers of displays */
+
+/* fixed position centered dot on page */
+#dot {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffd102;
+  cursor: pointer;
+}
+
+/* top layer, scroll backward */
 #backward {
   z-index: 50;
   position: fixed;
@@ -38,10 +56,13 @@ text {
   pointer-events: none;
 }
 
+/* bottom layer, scroll forward */
 #forward {
   fill: #101010;
   animation: textColor 30s linear 0.01s infinite;
   -webkit-animation: textColor 30s linear 0.01s infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 
 @keyframes stretchWidth {

@@ -136,3 +136,12 @@ window.addEventListener('scroll', (e) => {
     });
   }
 });
+
+// stop animation on forwardContainer when user click on #dot
+document.querySelector('#dot').onclick = () => {
+  if (forwardContainer.style.animationPlayState == 'running') {
+    forwardContainer.style.animationPlayState = 'paused';
+  } else {
+    forwardContainer.style.animationPlayState = 'running';
+  }
+};
