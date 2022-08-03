@@ -102,7 +102,9 @@ const addIdiomsToContainer = (idioms, container) => {
 
     div.innerHTML = `
       <svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" width="100%" height="200px" preserveAspectRatio="none">
-        <text x="0" y="15" textlength="100%" lengthadjust="spacingAndGlyphs" stroke="#3d5af1" stroke-width="0">${idiom}</text>
+        <text x="0" y="15" lengthadjust="spacingAndGlyphs" textlength="100%" stroke="#ffd102" stroke-width="0">
+        ${idiom}
+        </text>
       </svg>
     `;
     container.appendChild(div);

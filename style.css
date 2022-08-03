@@ -1,11 +1,24 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+
+* {
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+/* body {
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  background-color: transparent;
-  animation: backgroundColor 30s infinite;
-  -webkit-animation: backgroundColor 30s infinite;
+} */
+
+svg {
+  font-family: 'Songti SC', 'Noto Serif SC', serif;
 }
+
+/* text {
+  width: 100%;
+  margin: auto;
+} */
 
 .top {
   z-index: 999;
@@ -17,9 +30,9 @@ body {
   background: linear-gradient(#ffffff, rgba(0, 0, 0, 0));
 }
 
-#idioms {
+/* #idioms {
   overflow: scroll;
-}
+} */
 
 .idiom-row {
   width: 100vw;
@@ -41,6 +54,9 @@ body {
   left: 0;
   bottom: 0;
   fill: #d72323;
+  background: transparent;
+  animation: backgroundColor 30s linear infinite;
+  -webkit-animation: backgroundColor 30s linear infinite;
 }
 
 #forward {
@@ -62,13 +78,13 @@ body {
 
 @keyframes backgroundColor {
   0% {
-    background-color: transparent;
+    background: transparent;
   }
   50% {
-    background-color: white;
+    background: white;
   }
   100% {
-    background-color: transparent;
+    background: transparent;
   }
 }
 
