@@ -4,35 +4,12 @@
   text-rendering: optimizeLegibility;
   margin: 0;
   scrollbar-width: none;
+  cursor: default;
 }
-
-/* body {
-  width: 100vw;
-  height: 100vh;
-} */
 
 svg {
   font-family: 'Songti SC', 'Noto Serif SC', serif;
 }
-
-/* text {
-  width: 100%;
-  margin: auto;
-} */
-
-.top {
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 70px;
-  background: linear-gradient(#ffffff, rgba(0, 0, 0, 0));
-}
-
-/* #idioms {
-  overflow: scroll;
-} */
 
 .idiom-row {
   width: 100vw;
@@ -54,9 +31,10 @@ svg {
   left: 0;
   bottom: 0;
   fill: #d72323;
+
   background: transparent;
-  animation: backgroundColor 30s linear infinite;
-  -webkit-animation: backgroundColor 30s linear infinite;
+  animation: backgroundColor 30s linear 0.01s infinite;
+  -webkit-animation: backgroundColor 30s linear 0.01s infinite;
 }
 
 #forward {
