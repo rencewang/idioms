@@ -11,6 +11,10 @@ svg {
   font-family: 'Songti SC', 'Noto Serif SC', serif;
 }
 
+text {
+  font-size: 90px;
+}
+
 .idiom-row {
   width: 100vw;
   margin: 0 auto;
