@@ -26,20 +26,24 @@ svg {
 }
 
 #backward {
-  z-index: -50;
+  z-index: 50;
   position: fixed;
   left: 0;
   bottom: 0;
   fill: #d72323;
+  pointer-events: none;
 
-  background: transparent;
+  /* background: transparent;
   animation: backgroundColor 30s linear 0.01s infinite;
-  -webkit-animation: backgroundColor 30s linear 0.01s infinite;
+  -webkit-animation: backgroundColor 30s linear 0.01s infinite; */
 }
 
 #forward {
-  fill: #3d5af1;
-  mix-blend-mode: exclusion;
+  /* fill: #3d5af1; */
+  /* mix-blend-mode: exclusion; */
+  fill: #101010;
+  animation: textColor 30s linear 0.01s infinite;
+  -webkit-animation: textColor 30s linear 0.01s infinite;
 }
 
 @keyframes stretchWidth {
@@ -54,15 +58,15 @@ svg {
   }
 }
 
-@keyframes backgroundColor {
+@keyframes textColor {
   0% {
-    background: transparent;
+    fill: #101010;
   }
   50% {
-    background: white;
+    fill: transparent;
   }
   100% {
-    background: transparent;
+    fill: #101010;
   }
 }
 
