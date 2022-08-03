@@ -32,15 +32,9 @@ svg {
   bottom: 0;
   fill: #d72323;
   pointer-events: none;
-
-  /* background: transparent;
-  animation: backgroundColor 30s linear 0.01s infinite;
-  -webkit-animation: backgroundColor 30s linear 0.01s infinite; */
 }
 
 #forward {
-  /* fill: #3d5af1; */
-  /* mix-blend-mode: exclusion; */
   fill: #101010;
   animation: textColor 30s linear 0.01s infinite;
   -webkit-animation: textColor 30s linear 0.01s infinite;
