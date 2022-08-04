@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+@font-face {
+  font-family: 'Songti SC';
+  src: url('/Songti\ SC\ Regular.ttf') format('truetype');
+}
 
 * {
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   scrollbar-width: none;
   cursor: default;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Individual SVG rows */
@@ -17,9 +29,11 @@
   -webkit-animation-play-state: paused;
 }
 
-.idiom-row:hover {
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
+@media (hover: hover) {
+  .idiom-row:hover {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  }
 }
 
 svg {
@@ -45,22 +59,24 @@ text {
   transition: background-color 0.5s linear;
 }
 
-#dot:hover {
-  background-color: #d72323;
-}
+@media (hover: hover) {
+  #dot:hover {
+    background-color: #d72323;
+  }
 
-#dot:hover:after {
-  content: 'stop';
-  content: attr(data-after);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-style: italic;
-  text-align: center;
-  font-weight: bold;
+  #dot:hover:after {
+    content: 'stop';
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 /* top layer, scroll backward */
