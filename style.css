@@ -21,6 +21,12 @@ body {
   max-height: calc(100vh - env(safe-area-inset-bottom));
 }
 
+#idioms {
+  max-height: calc(100% - 120px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 /* Individual SVG rows */
 .idiom-row {
   width: 100vw;
@@ -134,6 +140,5 @@ text {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  display: none;
 }
