@@ -16,7 +16,9 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(100vh - env(safe-area-inset-bottom));
+  max-height: calc(100vh - env(safe-area-inset-bottom));
 }
 
 /* Individual SVG rows */
