@@ -117,6 +117,18 @@ text {
   }
 }
 
+/* loading screen that covers entire page */
+#loading {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #101010;
+  transition: opacity 0.5s linear;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

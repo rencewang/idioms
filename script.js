@@ -121,11 +121,14 @@ addIdiomsToContainer(idioms, backwardContainer);
 // randomize position on page when reloading
 const scrollTop =
   Math.random() * (forwardContainer.clientHeight - window.innerHeight);
-window.onload = function () {
-  setTimeout(function () {
-    window.scrollTo({ top: scrollTop });
-  }, 0);
-};
+window.scrollTo({ top: scrollTop });
+
+// remove loading screen after 3 seconds
+setTimeout(() => {
+  document.querySelector('#loading').style.opacity = 0;
+  document.querySelector('#loading').style.zIndex = -100;
+  // document.querySelector('#loading').remove();
+}, 1000);
 
 // scroll backwardContainer in reverse direction and infinite scroll
 window.addEventListener('scroll', (e) => {
