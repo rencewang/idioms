@@ -67,23 +67,7 @@ const idioms = [
 // reorder idioms for every load
 const shuffle = (array) => {
   let modifiedArray = array.slice();
-  let currentIndex = array.length;
-  let randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex != 0) {
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [modifiedArray[currentIndex], modifiedArray[randomIndex]] = [
-      modifiedArray[randomIndex],
-      modifiedArray[currentIndex],
-    ];
-  }
-
-  return modifiedArray;
+  return modifiedArray.sort(() => Math.random() - 0.5);
 };
 
 // increase stroke width of the text
