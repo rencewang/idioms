@@ -78,10 +78,13 @@ const increaseStroke = (element) => {
 
 const addIdiomsToContainer = (idioms, container) => {
   shuffle(idioms).forEach((idiom) => {
-    let div = document.createElement('div');
+    let parent = document.createElement('div');
+    parent.classList.add('idiom-row-parent');
 
+    let div = document.createElement('div');
     div.classList.add('idiom-row');
     div.classList.add('noselect');
+
     div.onclick = (element) => {
       increaseStroke(element.target);
     };
@@ -93,7 +96,9 @@ const addIdiomsToContainer = (idioms, container) => {
         </text>
       </svg>
     `;
-    container.appendChild(div);
+
+    parent.appendChild(div);
+    container.appendChild(parent);
   });
 };
 
