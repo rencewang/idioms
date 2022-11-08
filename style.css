@@ -84,7 +84,23 @@ text {
   height: 150px;
   background-color: rgb(255, 255, 255);
   z-index: 1000;
-  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.1s linear;
+}
+
+#interpreter-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #d72323;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* top layer, scroll backward */

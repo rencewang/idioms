@@ -87,6 +87,10 @@ const addIdiomsToContainer = (idioms, container) => {
 
     div.onclick = (element) => {
       increaseStroke(element.target);
+      // document.querySelector('#interpreter').style.display = 'block';
+
+      document.querySelector('#interpreter').style.visibility = 'visible';
+      document.querySelector('#interpreter').style.opacity = '1';
       document.querySelector('#interpreter-text').innerHTML = idiom;
     };
 
@@ -101,6 +105,11 @@ const addIdiomsToContainer = (idioms, container) => {
     parent.appendChild(div);
     container.appendChild(parent);
   });
+};
+
+document.querySelector('#interpreter-close').onclick = () => {
+  document.querySelector('#interpreter').style.visibility = 'hidden';
+  document.querySelector('#interpreter').style.opacity = '0';
 };
 
 const forwardContainer = document.querySelector('#forward');
