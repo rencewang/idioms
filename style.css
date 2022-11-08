@@ -74,6 +74,19 @@ text {
   }
 }
 
+#interpreter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  max-width: 300px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  /* display: none; */
+}
+
 /* top layer, scroll backward */
 #backward {
   z-index: 50;

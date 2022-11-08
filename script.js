@@ -87,6 +87,7 @@ const addIdiomsToContainer = (idioms, container) => {
 
     div.onclick = (element) => {
       increaseStroke(element.target);
+      document.querySelector('#interpreter-text').innerHTML = idiom;
     };
 
     div.innerHTML = `
