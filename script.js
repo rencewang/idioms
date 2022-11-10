@@ -140,3 +140,30 @@ window.addEventListener('scroll', (e) => {
     });
   }
 });
+
+// limit scroll amount for every 1 second
+// let scrolledAmount = window.scrollY;
+// let timeout;
+
+// window.addEventListener('scroll', (e) => {
+//   let scrollingAmount = window.scrollY;
+//   let scrollMax = 300;
+
+//   // Scrolling down
+//   if (scrollingAmount > scrolledAmount + scrollMax) {
+//     console.log('No scroll allowed!');
+
+//     // "force" scroll positioin
+//     window.scrollY = scrolledAmount + scrollMax;
+
+//     // a timeout to prevent scrolling for at least 2 seconds
+//     clearTimeout(timeout);
+//     timeout = setTimeout(function () {
+//       console.clear();
+//       console.log('ok, you can scroll again.');
+
+//       // Update the scroll limit
+//       scrolledAmount = scrolledAmount + scrollMax;
+//     }, 1000);
+//   }
+// });
