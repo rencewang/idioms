@@ -52,6 +52,7 @@ text {
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
+  border: 2px solid #d72323;
   transition: visibility 0s, opacity 0.1s linear;
 }
 
@@ -81,7 +82,7 @@ text {
 
 /* bottom layer, scroll forward */
 #forward {
-  fill: #b8b8b8;
+  fill: #ffd102;
   /* animation: textColor 30s linear 0.01s infinite;
   -webkit-animation: textColor 30s linear 0.01s infinite;
   -webkit-animation-play-state: running;
