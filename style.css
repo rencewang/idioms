@@ -18,8 +18,8 @@
 .idiom-row {
   width: 100vw;
   margin: 0 auto;
-  animation: stretchWidth 5s infinite;
-  -webkit-animation: stretchWidth 5s infinite;
+  animation: stretchWidth 5s infinite ease-in-out;
+  -webkit-animation: stretchWidth 5s infinite ease-in-out;
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
 }
@@ -82,7 +82,8 @@ text {
 
 /* bottom layer, scroll forward */
 #forward {
-  fill: #ffd102;
+  fill: #dea8a8;
+  /* fill: #ffd102; */
   /* animation: textColor 30s linear 0.01s infinite;
   -webkit-animation: textColor 30s linear 0.01s infinite;
   -webkit-animation-play-state: running;
