@@ -48,7 +48,8 @@ text {
   min-width: 200px;
   max-width: 300px;
   height: 150px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffd102;
+  color: #d72323;
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
@@ -62,8 +63,8 @@ text {
   right: 0;
   width: 20px;
   height: 20px;
-  background-color: #d72323;
-  color: #fff;
+  background-color: #ffd102;
+  color: #d72323;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -82,7 +83,7 @@ text {
 
 /* bottom layer, scroll forward */
 #forward {
-  fill: #dea8a8;
+  fill: #eed8d8;
   /* fill: #ffd102; */
   /* animation: textColor 30s linear 0.01s infinite;
   -webkit-animation: textColor 30s linear 0.01s infinite;
