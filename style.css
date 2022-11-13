@@ -18,8 +18,8 @@
 .idiom-row {
   width: 100vw;
   margin: 0 auto;
-  animation: stretchWidth 5s infinite ease-in-out;
-  -webkit-animation: stretchWidth 5s infinite ease-in-out;
+  animation: stretchWidth 8s infinite ease-in-out;
+  -webkit-animation: stretchWidth 8s infinite ease-in-out;
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
 }
