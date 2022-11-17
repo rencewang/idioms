@@ -24,6 +24,11 @@ const idioms = [
     interpretation: 'fdsa',
   },
   {
+    text: ['功名半纸', '风雪千山'],
+    interpretation: 'fdsa',
+    source: '殿前欢',
+  },
+  {
     text: ['万古长空', '一朝风月'],
     interpretation: 'mind the fleeting moments rather than eternal narratives.',
     source: '崇慧禅师',
@@ -166,6 +171,16 @@ const idioms = [
   },
   {
     text: '江流日下',
+    interpretation: 'fdsa',
+    source: 'fdsa',
+  },
+  {
+    text: '华亭鹤唳',
+    interpretation: 'fdsa',
+    source: 'fdsa',
+  },
+  {
+    text: '红炉点雪',
     interpretation: 'fdsa',
     source: 'fdsa',
   },
