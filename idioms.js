@@ -29,6 +29,11 @@ const idioms = [
     source: '殿前欢',
   },
   {
+    text: ['实事求是', '格物致知'],
+    interpretation: 'Seek truth from facts.',
+    source: '',
+  },
+  {
     text: ['万古长空', '一朝风月'],
     interpretation: 'mind the fleeting moments rather than eternal narratives.',
     source: '崇慧禅师',
