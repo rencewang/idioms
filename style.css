@@ -14,6 +14,16 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+  background: #d72323;
+  color: white;
+}
+
+::-moz-selection {
+  background: #d72323;
+  color: white;
+}
+
 /* Individual SVG rows */
 .idiom-row {
   width: 100vw;
@@ -48,12 +58,12 @@ text {
   min-width: 200px;
   max-width: 300px;
   height: 150px;
-  background-color: #ffdf1e;
+  background-color: white;
   color: #d72323;
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  border: 2px solid #d72323;
+  border: 1px solid #d72323;
   transition: visibility 0s, opacity 0.1s linear;
 }
 
@@ -63,12 +73,28 @@ text {
   right: 0;
   width: 20px;
   height: 20px;
-  background-color: #ffdf1e;
   color: #d72323;
   font-size: 20px;
-  font-weight: bold;
   text-align: center;
   cursor: pointer;
+}
+
+#interpreter-text {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#interpreter-interpretation,
+#interpreter-source {
+  margin: 5px 20px 0 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+#interpreter-text > span {
+  background-color: #d72323;
+  color: white;
 }
 
 /* top layer, scroll backward */

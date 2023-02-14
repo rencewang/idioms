@@ -25,11 +25,13 @@ const addIdiomsToContainer = (idioms, container) => {
       document.querySelector('#interpreter').style.visibility = 'visible';
       document.querySelector('#interpreter').style.opacity = '1';
 
-      document.querySelector('#interpreter-text').innerHTML = idiom.text;
+      document.querySelector(
+        '#interpreter-text'
+      ).innerHTML = `<span>${idiom.text}</span>`;
       document.querySelector('#interpreter-interpretation').innerHTML =
-        idiom.interpretation ? `${idiom.interpretation}` : '';
+        idiom.interpretation ? `<span>${idiom.interpretation}</span>` : '';
       document.querySelector('#interpreter-source').innerHTML = idiom.source
-        ? `${idiom.source}`
+        ? `<span>${idiom.source}</span>`
         : '';
     };
 
