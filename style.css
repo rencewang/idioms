@@ -67,13 +67,6 @@ text {
   transition: visibility 0s, opacity 0.1s linear;
 }
 
-@media screen and (max-width: 600px) {
-  #interpreter {
-    width: 50%;
-    height: 200px;
-  }
-}
-
 #interpreter-close {
   position: absolute;
   top: 0;
@@ -87,7 +80,8 @@ text {
 }
 
 #interpreter-text {
-  margin-top: 20px;
+  font-family: 'Songti SC', 'Noto Serif SC', serif;
+  margin: 20px 5px 0 5px;
   font-size: 20px;
   text-align: center;
 }
@@ -102,6 +96,17 @@ text {
 #interpreter-text > span {
   background-color: #d72323;
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  #interpreter {
+    width: 50%;
+    height: 200px;
+  }
+
+  #interpreter-text {
+    margin-top: 40px;
+  }
 }
 
 /* top layer, scroll backward */
