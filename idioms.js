@@ -117,6 +117,12 @@ const idioms = [
     source: '庄子',
   },
   {
+    text: ['光而不耀', '静水流深'],
+    interpretation:
+      'Be bright but not dazzling, know that still water runs deep',
+    source: '老子',
+  },
+  {
     text: '沧海桑田',
     interpretation: "long time's past, everything has changed.",
   },
